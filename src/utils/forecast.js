@@ -11,7 +11,8 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to fetch results. Try again', undefined)
 
         } else {
-            callback(undefined, `${body.current.weather_descriptions}. It is currently ${body.current.temperature} degrees out. There is a ${body.current.precip}% chance of rain.`)
+            callback(undefined, `${body.current.weather_descriptions}. It is currently ${body.current.temperature} degrees out with humidity of ${body.current.humidity}. There is a ${body.current.precip}% chance of rain.`)
+            
         }
     })
 }
